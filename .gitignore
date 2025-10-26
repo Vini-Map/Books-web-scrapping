@@ -22,9 +22,6 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
-# Dados locais
-data/*.csv
-
 # Arquivos de build
 dist/
 build/
