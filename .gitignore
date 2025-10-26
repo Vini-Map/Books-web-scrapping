@@ -1,0 +1,34 @@
+# Ambiente virtual
+venv/
+.env
+.env.local
+
+# Cache e arquivos temporários
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Configurações do VSCode e IDEs
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Dados locais
+data/*.csv
+
+# Arquivos de build
+dist/
+build/
+*.egg-info/
+
+# Configurações específicas de SO
+*.bak

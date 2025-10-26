@@ -1,0 +1,13 @@
+# --- Core ---
+requests==2.32.3
+beautifulsoup4==4.12.3
+
+# --- API ---
+fastapi==0.115.2
+uvicorn==0.32.0
+
+# --- Data ---
+pydantic==2.9.2
+
+# --- Utilidades (opcional mas útil) ---
+python-dotenv==1.0.1
