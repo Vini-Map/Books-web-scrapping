@@ -228,7 +228,7 @@ Para deploy em plataformas como **Render**, **Railway**, ou **Vercel (Serverless
 
 **Vinícius Miranda**  
 📍 Projeto acadêmico — FIAP Data Engineering  
-💡 Contato: [LinkedIn]((https://www.linkedin.com/in/vinipiovesan))
+💡 Contato: [LinkedIn]([https://www.linkedin.com/in/vinipiovesan])
 
 ---
 
