@@ -234,4 +234,4 @@ Para deploy em plataformas como **Render**, **Railway**, ou **Vercel (Serverless
 
 ## 📜 Licença
 
-MIT License — Livre para uso e modificação, com créditos ao autor original.
+.
