@@ -2,6 +2,25 @@
 
 API pública e pipeline de dados que realiza **Web Scraping** do site [Books to Scrape](https://books.toscrape.com/) e disponibiliza informações completas sobre livros em uma **API REST com FastAPI**.
 
+## 🚀 Deploy
+
+A API está disponível em produção:
+
+**🔗 Documentação Swagger:** [https://books-web-scrapping.onrender.com/docs](https://books-web-scrapping.onrender.com/docs)
+
+> Acesse a documentação interativa para explorar todos os endpoints disponíveis e testar a API em tempo real.
+
+## 📐 Arquitetura
+
+Para uma visão detalhada da arquitetura do projeto, incluindo:
+- Pipeline de dados completo
+- Estrutura da API
+- Fluxo de processamento
+- Casos de uso para Machine Learning
+- Planos de escalabilidade
+
+**Consulte:** [ARQUITETURA.md](ARQUITETURA.md)
+
 ---
 
 ## 🧠 Visão Geral do Projeto
@@ -187,7 +206,7 @@ O Swagger da API foi personalizado com:
 
 ---
 
-## 🚀 Deploy
+## 🛠️ Deploy Local
 
 Para deploy em plataformas como **Render**, **Railway**, ou **Vercel (Serverless Python)**:
 
@@ -196,10 +215,6 @@ Para deploy em plataformas como **Render**, **Railway**, ou **Vercel (Serverless
 3. Configure o comando de execução:
    ```
    uvicorn api.main:app --host 0.0.0.0 --port $PORT
-   ```
-4. Teste acessando:
-   ```
-   https://seuapp.onrender.com/docs
    ```
 
 ---
