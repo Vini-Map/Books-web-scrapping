@@ -21,6 +21,11 @@ Para uma visão detalhada da arquitetura do projeto, incluindo:
 
 **Consulte:** [ARQUITETURA.md](ARQUITETURA.md)
 
+Video Demonstrativo do codigo e da API em funcionamento.
+https://drive.google.com/file/d/1nBrmpcUVCJYtwc_2tS5vkTj-2-KGg8Lu/view?usp=sharing
+
+
+
 ---
 
 ## 🧠 Visão Geral do Projeto
