@@ -15,15 +15,22 @@ def list_books():
    
     return [b.dict() for b in books_data]
 
-@router.get("/{book_id}", description="Retorna os detalhes completos de um livro específico pelo ID.")
-def get_book(book_id: int):
-    for book in books_data:
-        if book.id == book_id:
-            return book.dict()
-    raise HTTPException(status_code=404, detail="Livro não encontrado")
+@router.get("/search/title", description="Busca livros apenas por título.")
+def search_by_title(q: str = Query(..., description="Termo de busca no título")):
+    results = [b for b in books_data if q.lower() in b.title.lower()]
+    return [b.dict() for b in results]
 
-@router.get("/search", description="Busca livros por título e/ou categoria.")
-def search_books(title: str = Query(None), category: str = Query(None)):
+@router.get("/search/category", description="Busca livros apenas por categoria.")
+def search_by_category(q: str = Query(..., description="Nome da categoria")):
+    results = [b for b in books_data if q.lower() in b.category.lower()]
+    return [b.dict() for b in results]
+
+@router.get("/search", description="Busca livros por título e/ou categoria. Pode usar um, outro ou ambos os parâmetros.")
+def search_books(title: str = Query(None, description="Termo de busca no título"), 
+                 category: str = Query(None, description="Nome da categoria")):
+    if not title and not category:
+        raise HTTPException(status_code=400, detail="Forneça pelo menos um parâmetro: title ou category")
+    
     results = books_data
     if title:
         results = [b for b in results if title.lower() in b.title.lower()]
@@ -40,3 +47,10 @@ def top_rated(limit: int = Query(10)):
 def price_range(min: float = Query(0), max: float = Query(1000)):
     filtered = [b for b in books_data if min <= b.price <= max]
     return [b.dict() for b in filtered]
+
+@router.get("/{book_id}", description="Retorna os detalhes completos de um livro específico pelo ID.")
+def get_book(book_id: int):
+    for book in books_data:
+        if book.id == book_id:
+            return book.dict()
+    raise HTTPException(status_code=404, detail="Livro não encontrado")
